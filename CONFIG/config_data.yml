@@ -1,0 +1,8 @@
+DataAPIToken: your token
+DataAPIDataType: intraday
+DataAPIFetchMethod:
+DataAPIFreq: 1min
+DataAPIStartDate: 2018-01-01
+DataAPIEndDate: 2018-01-30
+DataAPINumberOfObsPerDay: 391
+
