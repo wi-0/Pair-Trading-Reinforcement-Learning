@@ -58,7 +58,7 @@ class EGCointegration(Strategy):
 
     def cal_spread(self, x, y, is_norm):
         resid = y - x * self.beta
-        resid = (resid - resid.mean()) / resid.std() if is_norm is True else resid
+        resid = (resid - self.resid_mean) / self.resid_std if is_norm is True else resid
         return resid
 
     def get_sample(self, start, end):
@@ -81,6 +81,9 @@ class EGCointegration(Strategy):
         x, y, _ = self.get_sample(start, end)
         self.p  = self.get_p_value(x, y)
         if self.p < cl:
+            resid = self.cal_spread(x, y, is_norm=False)
+            self.resid_mean = resid.mean()
+            self.resid_std  = resid.std()
             self.run_ols(x, y)
 
     def gen_signal(self, start, end, trade_th, stop_loss, transaction_cost):
