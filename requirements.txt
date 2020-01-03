@@ -8,4 +8,5 @@ aiohttp
 statsmodels
 PyYAML
 seaborn
+fastcluster
 python_version=='3.6.6'
