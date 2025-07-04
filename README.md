@@ -5,7 +5,7 @@
 </p>
 <p align="justify">
 
-A TensoFlow implemention in Reinforcement Learning and Pairs Trading. The current status of the project covers implementation of RL in cointegration pair trading based on 1-minute stock market data. For the Reinforcement Learning here we use the N-armed bandit approach. The code is expandable so you can plug any strategies, data API or machine learning algorithms into the tool if you follow the style.
+A TensorFlow implemention in Reinforcement Learning and Pairs Trading. The current status of the project covers implementation of RL in cointegration pair trading based on 1-minute stock market data. For the Reinforcement Learning here we use the N-armed bandit approach. The code is expandable so you can plug any strategies, data API or machine learning algorithms into the tool if you follow the style.
 
 ## Data Source
 * [Tiingo](https://www.tiingo.com/) - A financial research platform that provides data including news, fundamentals and prices. We can extract the intraday stock market data through its REST IEX API that retrieves TOPS data (top of book, last sale data and top bid and ask quotes) from the IEX Exchange.
